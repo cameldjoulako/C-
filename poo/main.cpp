@@ -3,6 +3,7 @@
 using namespace std;
 
 #include <string>
+#include "Compte.h"
 
 
 
@@ -11,30 +12,21 @@ private:
     //déclarattion des membres privés
 
 public:
-    //déclarattion des membres privés
+    //déclarattion des membres public
 
-};
-
-
-class Compte {
-private:
-    string nom;
-    int numero;
-    double solde;
-
-
-public:
-    void crediter(double x){}
-    void debiter(double x){}
-    void afficherSolde(){}
-    void afficherNumero(){}
-    void afficherNom(){}
-    void changerNom(string n){}
 };
 
 
 int main()
 {
     cout << "Hello world!" << endl;
+
+
+    //syntaxe de declaration d'une instance
+    NomDelaClasse nomDel'objet;
+
+    Compte medina;
+    medina.nom = "medina";
+
     return 0;
 }

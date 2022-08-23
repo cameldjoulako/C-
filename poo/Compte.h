@@ -16,6 +16,7 @@ public:
     void afficherNumero(){}
     void afficherNom(){}
     void changerNom(std::string n){}
+    static void affichernbComptes(){}
 };
 
 #endif // COMPTE_H_INCLUDED

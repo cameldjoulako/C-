@@ -5,7 +5,9 @@
 
 using namespace std;
 
-void Compte::crediter(double x){
+int Compte::nbComptes = 0;
+
+Compte::crediter(double x){
     solde +=x;
 }
 
@@ -25,6 +27,9 @@ void afficherNom(){
     cout << "nom  : " << nom << endl;
 }
 
+void affichernbComptes(){
+    cout << "nombre de comptes  : " << nbComptes << endl;
+}
 
 
 void changerNom(string n){
