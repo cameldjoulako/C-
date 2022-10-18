@@ -11,6 +11,7 @@ class Test
         Test(const Test &t);
         void affiche();
         void modifier(int n);
+        Test & operator=(const Test &j);
         ~Test();
 
     private:

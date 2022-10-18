@@ -31,3 +31,10 @@ void Test::modifier(int n)
 {
     *i = n;
 }
+
+
+Test & Test::operator=(const Test &j){
+    *i = *(j.i);
+
+    return *this;
+}
