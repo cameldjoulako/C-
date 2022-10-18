@@ -10,6 +10,7 @@ int taille;
 public :
     Taleau(int *t, int n);
     Tableau(const Tableau &t);
+    Tableau operator=(const Tableau &t );
     ~Tableau();
 };
 

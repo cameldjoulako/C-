@@ -21,9 +21,21 @@ Tableau::Tableau(const Tableau &t){
         tab[k] = t.tab[k];
 
 
+
+
 }
 
 Tableau::~Tableau() {
 
     delete tab;
+}
+
+Tableau Tableau:: operator=(const Tableau &t ) {
+
+    delete []tab;
+    taille = t.taille;
+    tab = new int[t.taille];
+
+    for (int k = 0; k<t.taille; k++)
+        tab[k] = t.tab[k];
 }
