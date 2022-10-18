@@ -14,12 +14,12 @@ using namespace std;
 
 
 int main(){
- int age;
+ //int age;
 
- cin >> age;
- cout << age;
+ //cin >> age;
+ //cout << age;
 
-     double puissance(double nombre, int n) {
+     /*double puissance(double nombre, int n) {
 
         if (n=o) return (1);
         else return (a*puissance(a, n-1));
@@ -31,7 +31,13 @@ int main(){
     }
 
     int a = puissance(4, 9)
-    double p2 = puissance(10, 5, true);
+    double p2 = puissance(10, 5, true);*/
+
+
+    char num='1';
+    int a= int(num);
+
+    cout << a;
 }
 
 

@@ -1,5 +1,14 @@
 # depslib dependency file v1.0
-1657313108 source:e:\workspace\c++_workspace\poo\main.cpp
+1661503631 source:e:\workspace\c++_workspace\poo\main.cpp
 	<iostream>
 	<string>
+	"Compte.h"
+
+1661504047 e:\workspace\c++_workspace\poo\compte.h
+	<string>
+
+1661503977 source:e:\workspace\c++_workspace\poo\compte.cpp
+	<iostream>
+	<string>
+	"Compte.h"
 

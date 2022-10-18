@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1665996581 source:e:\workspace\c++_workspace\pointeurreferenceobjet\src\test.cpp
+	"Test.h"
+	<iostream>
+	<string>
+
+1665996284 e:\workspace\c++_workspace\pointeurreferenceobjet\include\test.h
+	<string>
+
+1665997847 source:e:\workspace\c++_workspace\pointeurreferenceobjet\main.cpp
+	<iostream>
+	"Test.h"
+
+1665998755 e:\workspace\c++_workspace\pointeurreferenceobjet\test.h
+	<string>
+
+1665997359 source:e:\workspace\c++_workspace\pointeurreferenceobjet\syntaxe.c
+

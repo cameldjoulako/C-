@@ -1,0 +1,1 @@
+//NomDelaClasse(const NomDelaClasse &objetacopier)
