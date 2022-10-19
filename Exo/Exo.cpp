@@ -39,3 +39,7 @@ Tableau Tableau:: operator=(const Tableau &t ) {
     for (int k = 0; k<t.taille; k++)
         tab[k] = t.tab[k];
 }
+
+// Forme canonique de Coplien
+
+

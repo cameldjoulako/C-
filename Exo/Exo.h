@@ -17,3 +17,12 @@ public :
 
 
 #endif // EXO_H_INCLUDED
+
+
+Objet o1
+Objet o2
+
+o1*o2
+o1+o2
+o1/o2
+o1==o2
