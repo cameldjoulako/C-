@@ -9,6 +9,14 @@ class Complexe {
         Complexe(double x=0, double y=0);
         double module();
         void affiche();
+
+        double getA(){
+            return a;
+        }
+
+         double getB(){
+            return b;
+        }
 };
 
 

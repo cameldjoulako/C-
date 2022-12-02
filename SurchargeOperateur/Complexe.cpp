@@ -1,4 +1,8 @@
 #include <cmath>
+#include "Complexe.h"
+#include <iostream>
+using namespace std;
+
 
 Complexe::Complexe(double x, double y): a(x),b(x) {}
 
