@@ -17,8 +17,22 @@ class Complexe {
          double getB(){
             return b;
         }
+
+        void setA(double b) {
+            a = b;
+        }
 };
 
+/*
+operator
 
+operator==
+operator+
+
+les opérateurs srurchageable:
+::
+.
+sizeof
+*/
 
 #endif // COMPLEXE_H_INCLUDED
