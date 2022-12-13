@@ -4,7 +4,7 @@
 using namespace std;
 
 
-Complexe::Complexe(double x, double y): a(x),b(x) {}
+Complexe::Complexe(double x, double y): a(x),b(y) {}
 
 double Complexe::module() {
     double mod = sqrt(a*a+b*b);
@@ -14,4 +14,9 @@ double Complexe::module() {
 void Complexe::affiche(){
     cout << "partie reelle: " << a << endl;
     cout << "partie imaginaire: " << b << endl;
+}
+
+istream& operator>>(istream &flux, Complexe &c){
+    flux>> c.a c.b;
+    return flux;
 }
