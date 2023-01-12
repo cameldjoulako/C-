@@ -192,7 +192,6 @@ using namespace std;
     }
 
     Rectangle r1, r2;
-
     r1 = r2;
 
 
