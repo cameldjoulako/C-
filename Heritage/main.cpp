@@ -174,7 +174,7 @@ using namespace std;
 
     //Affectation
 
-    //classe rectangle
+    /*classe rectangle
     Rectangle & operator=(const Rectangle& rec) {
         longueur = rec.longueur;
         largeur = rec.largeur;
@@ -189,10 +189,90 @@ using namespace std;
         Rectangle::operator=(rec),
         hauteur = rec.hauteur;
         return (*this);
-    }
+    }*/
 
-    Rectangle r1, r2;
-    r1 = r2;
+  //Syntaxe appel methode de la classe clere apres redefinition
+  //nomDeLaClasseMère::NomDeLaMéthode()
+
+
+  /*HERITAGE ET REDEFINITION
+
+    class Rectangle {
+        protected:
+            double largeur, longueur;
+        public:
+            Rectangle(double x=0, double y=0) {
+                largeur = x;
+                longueur = y;
+            }
+            double surface() {
+                return (longueur*largeur);
+            }
+    };
+
+
+    class Rectangle3D : public Rectangle {
+        protected:
+            double hauteur;
+        public:
+            Rectangle3D(double x=0, double y=0, double z=0):Rectangle(x, y) {
+                hauteur = z;
+            }
+            double volume() {
+                return (longueur*largeur*hauteur);
+            }
+             double surface() {
+                 double surface {0};
+                 surface = 2*longueur*largeur + 2*largeur*hauteur + 2*longueur*hauteur;
+                return surface;
+            }
+    };*/
+
+    /* HERITAGE MULTIPLE: SYNTAXE
+
+    class Fille : visibilité mere1, visibilité mere2, visibilité mere3... {
+        //declaration des nouveaux membres
+    } ;*/
+
+
+    /* EXEMPLE MULTIPLE*/
+    class Carnivore {
+        protected:
+            double poidsViande;
+        public:
+            Carnivore(double x=0):poidsViande(x){}
+            void afficher() {
+               cout << "Je mange " << poidsViande << " kilos de steack par jour" << endl;
+            }
+    };
+
+    class Herbivore {
+        protected:
+            double poidsHerbe;
+        public:
+            Herbivore(double x=0):poidsHerbe(x){}
+            void afficher() {
+               cout << "Je mange " << poidsHerbe << " kilos de gazon par jour" << endl;
+            }
+    };
+
+
+    class Omnivore : public Carnivore, public Herbivore {
+        private :
+            bool humain;
+        public:
+            Omnivore(double x, double y, bool h):Carnivore(x), Herbivore(y), humain(h){}
+
+            Omnivore():humain(true) {}
+
+            //using Herbivore::afficher;
+
+            void afficher() {
+                Carnivore::afficher();
+                Herbivore::afficher();
+            }
+
+    };
 
 
 int main()
@@ -260,6 +340,17 @@ int main()
     cout << "Surface : " << rec.surface() << endl;
 
     */
+
+    /*test HERITAGE ET REDEFINITION
+     Rectangle3D boite(2, 4, 5);
+     cout << "Surface de la boite: " << boite.surface() << endl;
+     cout << "Surface de la base: " << boite.Rectangle::surface() << endl;*/
+
+     //TEST HERITAGE MULTIPLE
+     Omnivore chat (2, 1, false);
+     chat.afficher();
+
+
 
     return 0;
 }
