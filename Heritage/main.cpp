@@ -235,7 +235,7 @@ using namespace std;
     } ;*/
 
 
-    /* EXEMPLE MULTIPLE*/
+    /* EXEMPLE MULTIPLE
     class Carnivore {
         protected:
             double poidsViande;
@@ -273,6 +273,61 @@ using namespace std;
             }
 
     };
+    */
+
+    //Gestion de la duplication des attributs
+
+    class Animal {
+        protected:
+            int age;
+        public:
+            Animal(int a = 0):age(a){}
+    };
+
+    class Carnivore: public virtual Animal {
+        protected:
+            double poidsViande;
+        public:
+            Carnivore(int a = 0, double x=0): Animal(a), poidsViande(x){}
+            void afficher() {
+               cout << "Je mange " << poidsViande << " kilos de steack par jour" << endl;
+            }
+    };
+
+    class Herbivore : public virtual Animal {
+        protected:
+            double poidsHerbe;
+        public:
+            Herbivore(int a = 0, double x=0) : Animal(a), poidsHerbe(x){}
+            void afficher() {
+               cout << "Je mange " << poidsHerbe << " kilos de gazon par jour" << endl;
+            }
+    };
+
+    class Omnivore : public Carnivore, public Herbivore {
+        private :
+            bool humain;
+        public:
+            Omnivore(int a, double x, double y, bool h) : Animal(a), Carnivore(a, x), Herbivore(a, y), humain(h){}
+
+            Omnivore():humain(true) {}
+
+            void afficher() {
+                Carnivore::afficher();
+                Herbivore::afficher();
+                cout << "J'ai " << Herbivore::age << " ans " << endl;
+
+            }
+
+    };
+    /* Solution du probleme de duplication des attributs : methode avec  "virtuel"
+        SYNTAXE/
+
+        class fille : visibilité virtual mère {
+
+        };
+
+    */
 
 
 int main()
@@ -346,10 +401,14 @@ int main()
      cout << "Surface de la boite: " << boite.surface() << endl;
      cout << "Surface de la base: " << boite.Rectangle::surface() << endl;*/
 
-     //TEST HERITAGE MULTIPLE
+     /*TEST HERITAGE MULTIPLE
      Omnivore chat (2, 1, false);
-     chat.afficher();
+     chat.afficher();*/
 
+
+     //TEST HERITAGE MULTIPLE - ambiguité
+     Omnivore chat(15, 2, 1, false);
+     chat.afficher();
 
 
     return 0;
