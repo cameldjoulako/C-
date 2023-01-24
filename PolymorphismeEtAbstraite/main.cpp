@@ -154,7 +154,8 @@ int main()
     delete f;
 
 
-    Figure * dessin[4]
+    Figure * dessin[4];
+
 
 
 
