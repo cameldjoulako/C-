@@ -267,12 +267,13 @@ using namespace std;
 
             //using Herbivore::afficher;
 
-            void afficher() {
+           /* void afficher() {
                 Carnivore::afficher();
                 Herbivore::afficher();
             }
 
     };
+
     */
 
     //Gestion de la duplication des attributs
@@ -404,6 +405,9 @@ int main()
      /*TEST HERITAGE MULTIPLE
      Omnivore chat (2, 1, false);
      chat.afficher();*/
+
+     chat.Carnivore::afficher()
+     chat.Herbivore::afficher()
 
 
      //TEST HERITAGE MULTIPLE - ambiguité

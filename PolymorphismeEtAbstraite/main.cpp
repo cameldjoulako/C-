@@ -4,6 +4,48 @@
 
 using namespace std;
 
+//POSITION DU PROBLEME
+/*class Rectangle {
+    protected:
+        double largeur, longueur;
+    public:
+        Rectangle(double x=0, double y=0) {
+            largeur = x;
+            longueur = y;
+        }
+        double surface() {
+            return (longueur*largeur);
+        }
+
+        double peinture() {
+            return (3*surface());
+        }
+};
+
+class Rectangle3D : public Rectangle {
+    protected:
+        double hauteur;
+    public:
+        Rectangle3D(double x, double y, double z):Rectangle(x, y) {
+            hauteur = z;
+        }
+        Rectangle3D():hauteur(0) {}
+
+        double surface() {
+            double surface = 0;
+
+            surface = 2*longueur*largeur + 2*largeur*hauteur+2*longueur*hauteur;
+
+            return surface;
+        }
+};
+
+
+*/
+
+
+
+
 //Methode virtuel
     /*class Rectangle {
         protected:
@@ -50,7 +92,7 @@ using namespace std;
     virtual typeDeRetour nomDeLaMethode(parametres) = 0;
 
     */
-
+/*
     class Figure {
         public:
             virtual double surface() = 0;
@@ -112,18 +154,18 @@ class Losange : public Figure {
 };
 
 
-
+*/
 
 int main()
 {
-    /*cout << "POLYMORPHISME" << endl;*/
+    cout << "POLYMORPHISME" << endl;
 
-    /*Rectangle rec(2, 3);
+    Rectangle rec(2, 3);
 
     cout << "Nombre de pots de peintures: " << rec.peinture() << endl;
 
     Rectangle3D boite(2, 3, 4);
-    cout << "Nombre de pots de peintures: " << boite.peinture() << endl;*/
+    cout << "Nombre de pots de peintures: " << boite.peinture() << endl;
 
     /*Rectangle *rec;
     rec = new Rectangle(2, 3);
@@ -138,7 +180,7 @@ int main()
     delete rec;*/
 
 
-    cout << "CLASSE ABSTRAITE" << endl;
+    /*cout << "CLASSE ABSTRAITE" << endl;
 
     Figure *f;
 
@@ -154,7 +196,7 @@ int main()
     delete f;
 
 
-    Figure * dessin[4];
+    Figure * dessin[4];*/
 
 
 
