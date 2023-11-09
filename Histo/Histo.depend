@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1699387352 source:d:\workspace\cpp-workspace\histo\main.cpp
+	"histo.h"
+	<iostream>
+	<Windows.h>
+
+1699387339 source:d:\workspace\cpp-workspace\histo\src\histo.cpp
+	"histo.h"
+	<iostream>
+
+1699387123 d:\workspace\cpp-workspace\histo\include\histo.h
+

@@ -37,7 +37,13 @@ int main(){
     char num='1';
     int a= int(num);
 
-    cout << a;
+    //cout << a;
+
+    typedef unsigned long int ulong;
+    ulong i = 1;
+    cout << i;
+
+
 }
 
 
