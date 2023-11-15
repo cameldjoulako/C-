@@ -45,11 +45,11 @@ template <typename R, typename S, ... class T, class U>
 
 
 //Declaration d'un template de classe pour créer les tableau
-template <class T=int>
+template <class T=int, int nb=1>
 class Tableau {
     private:
         T*tab;
-        int nb;
+        //int nb;
     public:
         Tableau(int n=1){
             nb = n;
